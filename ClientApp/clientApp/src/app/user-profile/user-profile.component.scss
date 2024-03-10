@@ -1,0 +1,39 @@
+.user-profile {
+    width: 95vw;
+    height: 95vh;
+    display: flex;
+    align-items: center;
+
+    .event-requests {
+          width: 80% !important;
+          margin: 20px;
+
+          .my-events {
+                margin-top: 20px;
+
+                .pending {
+                      .pending-list {
+                            display: grid;
+                            width: 100%;
+                            grid-template-columns: 5fr 1fr;
+                            border-bottom: solid rgba(201, 201, 201, 0.442) 1px;
+                            justify-content: center;
+                            align-items: center;
+                            margin-left: 20px;
+                            margin-right: 20px;
+
+                            button {
+                                  right: 0;
+                                  margin-right: 40px;
+                            }
+                      }
+                }
+
+                .add-event {
+                      position: absolute;
+                      right: 0;
+                      margin-right: 75px;
+                }
+          }
+    }
+}

@@ -1,0 +1,62 @@
+<div class="event-request">
+    <div class="image" *ngIf="!showSuggestions"></div>
+
+    <div class="request-form" *ngIf="!showSuggestions">
+        <form [formGroup]="eventRequestForm">
+            <mat-form-field appearance="outline">
+                <mat-label>Name of Event</mat-label>
+                <input matInput formControlName="eventName" />
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+                <mat-label>Event Type</mat-label>
+                <input matInput formControlName="eventType" />
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+                <mat-label>Date of Event</mat-label>
+                <input matInput formControlName="eventDate" />
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+                <mat-label>No. Of Peoples</mat-label>
+                <input matInput formControlName="numberOfPeoples" />
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+                <mat-label>City</mat-label>
+                <input matInput formControlName="city" />
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+                <mat-label>Budget</mat-label>
+                <input matInput formControlName="budget" />
+            </mat-form-field>
+
+            <button mat-raised-button color="primary" (click)="sendRequest()" class="send-request">
+                Send Request
+            </button>
+
+            <button mat-stroked-button color="warn" (click)="close()" class="send-request">
+                Exit
+            </button>
+        </form>
+    </div>
+
+    <div *ngIf="showSuggestions">
+        <div *ngIf="suggestions.length > 0">
+            <p>
+                We have gone through your request and here are the suggestions for
+                you...
+            </p>
+
+            <div *ngFor="let suggestion of suggestions">
+                <app-suggestion [suggestion]="suggestion" (click)="approveEvent(suggestion)"></app-suggestion>
+            </div>
+        </div>
+
+        <div *ngIf="suggestions.length < 1">
+            <p>It seems like we are booked for now! Thanks for visiting...</p>
+        </div>
+    </div>
+</div>

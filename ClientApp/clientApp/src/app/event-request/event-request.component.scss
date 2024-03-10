@@ -1,8 +1,8 @@
-.register {
+.event-request {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    width: 95vw;
-    height: 95vh;
+    width: 80vw;
+    height: 85vh;
 
     .image {
         display: flex;
@@ -12,12 +12,12 @@
         height: 95%;
     }
 
-    .form {
+    .request-form {
         display: flex;
         justify-content: center;
         align-items: center;
         width: 100%;
-        height: 100%;
+        height: 95%;
 
         form {
             display: grid;

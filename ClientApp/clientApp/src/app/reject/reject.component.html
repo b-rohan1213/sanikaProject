@@ -1,0 +1,15 @@
+<div>
+    <div>
+        <h4>Are you sure you wante to reject? </h4>
+
+        <h5>If yes then please enter the reason below</h5>
+    </div>
+    <form [formGroup]="rejectionForm">
+        <mat-form-field>
+            <input matInput formControlName="reason">
+        </mat-form-field>
+
+        <button mat-stroked-button (click)="reject()" color="primary">Reject</button>
+        <button mat-raised-button (click)="cancel()" color:want>Cancel</button>
+    </form>
+</div>

@@ -14,9 +14,17 @@ import { HomeComponent } from './home/home.component';
 import { TeamComponent } from './team/team.component';
 import { MatCardModule } from '@angular/material/card';
 import { MatInputModule } from '@angular/material/input'
+import { MatDialogModule } from '@angular/material/dialog'
+import { MatTable, MatTableModule } from '@angular/material/table'
+import { MatExpansionModule } from '@angular/material/expansion'
 import { RegisterComponent } from './register/register.component';
-import { LoginComponent } from './login/login.component';
 import { FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { RejectComponent } from './reject/reject.component';
+import { StaffProfileComponent } from './staff-profile/staff-profile.component';
+import { SuggestionComponent } from './suggestion/suggestion.component';
+import { TransactionComponent } from './transaction/transaction.component';
+import { UserProfileComponent } from './user-profile/user-profile.component';
+import { EventRequestComponent } from './event-request/event-request.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +34,12 @@ import { FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
     HomeComponent,
     TeamComponent,
     RegisterComponent,
-    LoginComponent,
+    RejectComponent,
+    StaffProfileComponent,
+    SuggestionComponent,
+    TransactionComponent,
+    UserProfileComponent,
+    EventRequestComponent,
   ],
   imports: [
     BrowserModule,
@@ -41,8 +54,11 @@ import { FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
     FormsModule,
     ReactiveFormsModule,
     MatInputModule,
+    MatDialogModule,
+    MatTableModule,
+    MatExpansionModule
   ],
   providers: [],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule { }

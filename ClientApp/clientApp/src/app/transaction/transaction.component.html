@@ -1,0 +1,35 @@
+<div class="transaction">
+    <div class="request-form">
+        <form [formGroup]="transactionForm">
+            <mat-form-field appearance="outline">
+                <mat-label></mat-label>
+                <input matInput formControlName="">
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+                <mat-label></mat-label>
+                <input matInput formControlName="">
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+                <mat-label>Transaction DAte</mat-label>
+                <input matInput formControlName="transactionDate">
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+                <mat-label>Description</mat-label>
+                <input matInput formControlName="description">
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+                <mat-label>Amount</mat-label>
+                <input matInput formControlName="amount">
+            </mat-form-field>
+
+            <div>
+                <button mat-raised-button (click)="makePayment()" color="primary">Make Payment</button>
+                <button mat-stroked-button (click)="close()" color="warn">Make Payment</button>
+            </div>
+        </form>
+    </div>
+</div>
