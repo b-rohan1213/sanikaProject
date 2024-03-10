@@ -1,0 +1,30 @@
+
+.about-container{
+    padding: 10px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(25, 116, 202);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+}
+
+.about{
+  font-family: "Playfair Display", serif;
+    color: rgb(25, 116, 202);
+    margin: 25px;
+}
+
+.about-head{
+  font-family: "Playfair Display", serif;
+  color: rgb(25, 116, 202);
+}
+
+.about-2{
+    display: flex;
+    justify-content: center;
+}
+
+.about-1{
+    display: flex;
+    justify-content: center;
+}

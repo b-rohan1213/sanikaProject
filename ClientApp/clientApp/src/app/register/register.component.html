@@ -1,0 +1,74 @@
+<div class="register-container">
+  <mat-card class="mat-elevation-z4 register-form-card">
+    <div class="form" *ngIf="!isLogin">
+      <form [formGroup]="registerForm">
+        <mat-form-field appearance="outline">
+          <mat-label>First Name</mat-label>
+          <input matInput formControlName="firstname" />
+          <mat-error></mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Last Name</mat-label>
+          <input matInput formControlName="lastname" />
+          <mat-error></mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>E-mail Address</mat-label>
+          <input matInput formControlName="email" />
+          <mat-error></mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Contact Number</mat-label>
+          <input matInput formControlName="contactno" />
+          <mat-error></mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Password</mat-label>
+          <input matInput formControlName="password" />
+          <mat-hint
+            >at least one upper case character, one number and one special
+            symbol is required**</mat-hint
+          >
+          <mat-error></mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Confirm Password</mat-label>
+          <input matInput formControlName="confirmPassword" />
+          <mat-error></mat-error>
+        </mat-form-field>
+
+        <button mat-raised-button>Register</button>
+      </form>
+    </div>
+
+    <div class="form" *ngIf="isLogin">
+      <form [formGroup]="loginForm">
+        <mat-form-field appearance="outline">
+          <mat-label>E-Mail</mat-label>
+          <input matInput formControlName="email" />
+          <mat-error></mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Password</mat-label>
+          <input matInput formControlName="password" />
+          <mat-error></mat-error>
+        </mat-form-field>
+
+        <button mat-raised-button>Login</button>
+      </form>
+    </div>
+
+    <div class="image">
+      <img
+        src="https://cdn1.vectorstock.com/i/1000x1000/87/50/man-male-young-person-icon-vector-10458750.jpg"
+        alt=""
+      />
+    </div>
+  </mat-card>
+</div>

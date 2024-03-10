@@ -1,0 +1,14 @@
+D:\UtsavVista\UtsavVista\UtsavVista.Data\bin\Debug\net8.0\UtsavVista.Data.deps.json
+D:\UtsavVista\UtsavVista\UtsavVista.Data\bin\Debug\net8.0\UtsavVista.Data.runtimeconfig.json
+D:\UtsavVista\UtsavVista\UtsavVista.Data\bin\Debug\net8.0\UtsavVista.Data.dll
+D:\UtsavVista\UtsavVista\UtsavVista.Data\bin\Debug\net8.0\UtsavVista.Data.pdb
+D:\UtsavVista\UtsavVista\UtsavVista.Data\obj\Debug\net8.0\UtsavVista.Data.csproj.AssemblyReference.cache
+D:\UtsavVista\UtsavVista\UtsavVista.Data\obj\Debug\net8.0\UtsavVista.Data.GeneratedMSBuildEditorConfig.editorconfig
+D:\UtsavVista\UtsavVista\UtsavVista.Data\obj\Debug\net8.0\UtsavVista.Data.AssemblyInfoInputs.cache
+D:\UtsavVista\UtsavVista\UtsavVista.Data\obj\Debug\net8.0\UtsavVista.Data.AssemblyInfo.cs
+D:\UtsavVista\UtsavVista\UtsavVista.Data\obj\Debug\net8.0\UtsavVista.Data.csproj.CoreCompileInputs.cache
+D:\UtsavVista\UtsavVista\UtsavVista.Data\obj\Debug\net8.0\UtsavVista.Data.dll
+D:\UtsavVista\UtsavVista\UtsavVista.Data\obj\Debug\net8.0\refint\UtsavVista.Data.dll
+D:\UtsavVista\UtsavVista\UtsavVista.Data\obj\Debug\net8.0\UtsavVista.Data.pdb
+D:\UtsavVista\UtsavVista\UtsavVista.Data\obj\Debug\net8.0\UtsavVista.Data.genruntimeconfig.cache
+D:\UtsavVista\UtsavVista\UtsavVista.Data\obj\Debug\net8.0\ref\UtsavVista.Data.dll

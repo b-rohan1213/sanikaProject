@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\UtsavVista.Web.props" />
+</Project>
