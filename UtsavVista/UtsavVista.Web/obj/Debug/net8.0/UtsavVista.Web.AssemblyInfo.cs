@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("UtsavVista.Web")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3c104ba0f298eb57518d2eec413cbc6496b89a49")]
 [assembly: System.Reflection.AssemblyProductAttribute("UtsavVista.Web")]
 [assembly: System.Reflection.AssemblyTitleAttribute("UtsavVista.Web")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -7,9 +7,10 @@ import { UserProfileComponent } from './user-profile/user-profile.component';
 import { StaffProfileComponent } from './staff-profile/staff-profile.component';
 
 const routes: Routes = [
+  { component: HomeComponent, path: '' },
+  { component: RegisterComponent, path: 'register' },
   { component: UserProfileComponent, path: 'user/:email' },
   { component: StaffProfileComponent, path: 'staff/:email' },
-  { component: RegisterComponent, path: 'register' },
 ];
 
 @NgModule({

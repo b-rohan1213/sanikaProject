@@ -7,7 +7,7 @@ import { EventRequest, Suggestion, Transaction } from '../Models/event';
   providedIn: 'root',
 })
 export class EventService {
-  baseUrl: string = '';
+  baseUrl: string = 'https://localhost:44301';
   constructor(private http: HttpClient) { }
 
   sendRequest(eventRequest: EventRequest, email: string): Observable<Suggestion[]> {

@@ -25,6 +25,7 @@ import { SuggestionComponent } from './suggestion/suggestion.component';
 import { TransactionComponent } from './transaction/transaction.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
 import { EventRequestComponent } from './event-request/event-request.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -56,7 +57,8 @@ import { EventRequestComponent } from './event-request/event-request.component';
     MatInputModule,
     MatDialogModule,
     MatTableModule,
-    MatExpansionModule
+    MatExpansionModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent],

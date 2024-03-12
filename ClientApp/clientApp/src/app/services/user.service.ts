@@ -1,5 +1,5 @@
 import { RegisterUser, UserDetails, LoginUser } from './../Models/user';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 
@@ -7,18 +7,25 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class UserService {
-  baseUrl: string = '';
-  constructor(private http: HttpClient) { }
+  baseUrl: string = 'https://localhost:44301';
+  header!: HttpHeaders;
+
+  constructor(private http: HttpClient) {
+    this.header = new HttpHeaders({
+      'accept': 'text/plain',
+      'content-type': 'application/json'
+    });
+  }
 
   register(registerData: RegisterUser): Observable<UserDetails> {
-    return this.http.post<UserDetails>(`${this.baseUrl}/user/register`, registerData);
+    return this.http.post<UserDetails>(`${this.baseUrl}/user/register`, registerData, { headers: this.header });
   }
 
   login(loginData: LoginUser) {
-    return this.http.post<UserDetails>(`${this.baseUrl}/user/login`, loginData);
+    return this.http.post<UserDetails>(`${this.baseUrl}/user/login`, loginData, { headers: this.header });
   }
 
   getUserDetails(emai: string): Observable<UserDetails> {
-    return this.http.get<UserDetails>(`${this.baseUrl}/user/details`);
+    return this.http.get<UserDetails>(`${this.baseUrl}/user/details`, { headers: this.header });
   }
 }

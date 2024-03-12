@@ -1,4 +1,4 @@
-<mat-card class="mat-elevation-z4 register-form-card">
+<mat-card class="register">
   <div class="image">
   </div>
 
@@ -25,8 +25,6 @@
       <mat-form-field appearance="outline">
         <mat-label>Password</mat-label>
         <input matInput formControlName="password" />
-        <mat-hint>at least one upper case character, one number and one special
-          symbol is required**</mat-hint>
         <mat-error></mat-error>
       </mat-form-field>
 
@@ -37,7 +35,7 @@
       </mat-form-field>
 
       <button mat-raised-button (click)="register()" color="primary">Register</button>
-      <button mat-stroked-button (click)="toggleRegister()" color="wrn">Already a User? Login</button>
+      <button mat-stroked-button (click)="toggleRegister()" color="warn">Already a User? Login</button>
     </form>
   </div>
 
@@ -56,8 +54,7 @@
       </mat-form-field>
 
       <button mat-raised-button (click)="login()" color="primary" class="main-button">Login</button>
-
-      <button mat-stroled-button (click)="toggleRegister()" color="primary" class="toggle-button">New User? Regiter</button>
+      <button mat-stroked-button (click)="toggleRegister()" color="warn" class="toggle-button">New User? Regiter</button>
     </form>
   </div>
 
