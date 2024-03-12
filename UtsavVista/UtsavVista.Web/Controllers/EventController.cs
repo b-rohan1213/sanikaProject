@@ -44,7 +44,7 @@ namespace UtsavVista.Web.Controllers
 
             if (currentUser != null)
             {
-                if (user.Email.ToLower().Contains("eventvista"))
+                if (user.Email.ToLower().Contains("utsavvista"))
                 {
                     currentUser.UserType = "staff";
                     this.dbcontext.Users.Update(currentUser);
@@ -83,11 +83,11 @@ namespace UtsavVista.Web.Controllers
                 throw new Exception("please fill details");
             }
 
-            var user = this.dbcontext.Users.FirstOrDefault(u => u.Email == login.username && u.Password == login.password);
+            var user = this.dbcontext.Users.FirstOrDefault(u => u.Email == login.email && u.Password == login.password);
 
             if (user == null)
             {
-                throw new Exception("Invalid Email of password");
+                throw new Exception("Invalid Email or password");
             }
 
             UserInfo currentUser = new UserInfo()

@@ -4017,26 +4017,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\RAJASHREE\\.nuget\\packages\\": {}
+    "C:\\Users\\aniket\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\UtsavVista\\UtsavVista\\UtsavVista.Data\\UtsavVista.Data.csproj",
+      "projectUniqueName": "D:\\Rohan\\sanikaProject\\UtsavVista\\UtsavVista.Data\\UtsavVista.Data.csproj",
       "projectName": "UtsavVista.Data",
-      "projectPath": "D:\\UtsavVista\\UtsavVista\\UtsavVista.Data\\UtsavVista.Data.csproj",
-      "packagesPath": "C:\\Users\\RAJASHREE\\.nuget\\packages\\",
-      "outputPath": "D:\\UtsavVista\\UtsavVista\\UtsavVista.Data\\obj\\",
+      "projectPath": "D:\\Rohan\\sanikaProject\\UtsavVista\\UtsavVista.Data\\UtsavVista.Data.csproj",
+      "packagesPath": "C:\\Users\\aniket\\.nuget\\packages\\",
+      "outputPath": "D:\\Rohan\\sanikaProject\\UtsavVista\\UtsavVista.Data\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\RAJASHREE\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\aniket\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -4049,6 +4047,11 @@
         "warnAsError": [
           "NU1605"
         ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -4092,7 +4095,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

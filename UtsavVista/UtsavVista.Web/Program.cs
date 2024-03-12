@@ -1,7 +1,9 @@
+using Microsoft.AspNetCore.Builder;
 using Microsoft.EntityFrameworkCore;
 using UtsavVista.Data;
 
 var builder = WebApplication.CreateBuilder(args);
+var cors = "corspolicy";
 
 // Add services to the container.
 
@@ -12,7 +14,7 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddCors(options =>
 {
-    options.AddDefaultPolicy(builder =>
+    options.AddPolicy(cors,builder =>
     {
         builder.AllowAnyOrigin()
                .AllowAnyMethod()
@@ -33,7 +35,7 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-
+app.UseCors(cors);
 app.UseAuthorization();
 
 app.MapControllers();

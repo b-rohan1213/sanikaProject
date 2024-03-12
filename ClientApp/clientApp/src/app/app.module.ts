@@ -17,6 +17,7 @@ import { MatInputModule } from '@angular/material/input'
 import { MatDialogModule } from '@angular/material/dialog'
 import { MatTable, MatTableModule } from '@angular/material/table'
 import { MatExpansionModule } from '@angular/material/expansion'
+import { MatSnackBarModule } from '@angular/material/snack-bar'
 import { RegisterComponent } from './register/register.component';
 import { FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RejectComponent } from './reject/reject.component';
@@ -52,6 +53,7 @@ import { HttpClientModule } from '@angular/common/http';
     MatFormFieldModule,
     MatToolbarModule,
     MatCardModule,
+    MatSnackBarModule,
     FormsModule,
     ReactiveFormsModule,
     MatInputModule,

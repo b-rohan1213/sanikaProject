@@ -1,5 +1,5 @@
 export interface RegisterUser {
-  fullName: string;
+  name: string;
   email: string;
   contactNo: string;
   password: string;
@@ -11,7 +11,7 @@ export interface LoginUser {
 }
 
 export interface UserDetails {
-  fullName: string;
+  name: string;
   email: string;
-  contactNo: string;
+  userType: string;
 }

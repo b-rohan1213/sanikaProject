@@ -65,7 +65,7 @@ export class UserProfileComponent {
   columndefs: any;
 
   userDetails: RegisterUser = {
-    fullName: '',
+    name: '',
     email: '',
     contactNo: '',
     password: '',

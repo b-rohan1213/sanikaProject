@@ -8,7 +8,7 @@ namespace UtsavVista.Data
 {
     public class Login
     {
-        public string username { get; set; }
+        public string email { get; set; }
 
         public string password { get; set; }
     }
