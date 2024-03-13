@@ -25,7 +25,7 @@ export class UserService {
     return this.http.post<UserDetails>(`${this.baseUrl}/user/login`, loginData, { headers: this.header });
   }
 
-  getUserDetails(emai: string): Observable<UserDetails> {
-    return this.http.get<UserDetails>(`${this.baseUrl}/user/details`, { headers: this.header });
+  getUserDetails(email: string): Observable<UserDetails> {
+    return this.http.get<UserDetails>(`${this.baseUrl}/user/${email}`, { headers: this.header });
   }
 }

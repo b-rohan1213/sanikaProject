@@ -1,6 +1,4 @@
 <div class="event-request">
-    <div class="image" *ngIf="!showSuggestions"></div>
-
     <div class="request-form" *ngIf="!showSuggestions">
         <form [formGroup]="eventRequestForm">
             <mat-form-field appearance="outline">
@@ -15,7 +13,9 @@
 
             <mat-form-field appearance="outline">
                 <mat-label>Date of Event</mat-label>
-                <input matInput formControlName="eventDate" />
+                <input matInput formControlName="eventDate" [matDatepicker]="dateOfEvent"/>
+                <mat-datepicker-toggle matIconSuffix [for]="dateOfEvent"></mat-datepicker-toggle>
+                <mat-datepicker #dateOfEvent></mat-datepicker>
             </mat-form-field>
 
             <mat-form-field appearance="outline">
@@ -33,7 +33,7 @@
                 <input matInput formControlName="budget" />
             </mat-form-field>
 
-            <button mat-raised-button color="primary" (click)="sendRequest()" class="send-request">
+            <button mat-raised-button color="primary" (click)="sendRequest()" class="send-request" [disabled]="!eventRequestForm.valid">
                 Send Request
             </button>
 
@@ -53,10 +53,6 @@
             <div *ngFor="let suggestion of suggestions">
                 <app-suggestion [suggestion]="suggestion" (click)="approveEvent(suggestion)"></app-suggestion>
             </div>
-        </div>
-
-        <div *ngIf="suggestions.length < 1">
-            <p>It seems like we are booked for now! Thanks for visiting...</p>
         </div>
     </div>
 </div>

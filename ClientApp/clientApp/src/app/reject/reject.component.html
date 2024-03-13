@@ -1,11 +1,9 @@
-<div>
-    <div>
-        <h4>Are you sure you wante to reject? </h4>
-
-        <h5>If yes then please enter the reason below</h5>
-    </div>
-    <form [formGroup]="rejectionForm">
+<div class="reject-request">
+    <h4>Are you sure you wante to reject? </h4>
+    <br>
+    <form [formGroup]="rejectionForm" style="display: grid;">
         <mat-form-field>
+            <mat-label>Reason</mat-label>
             <input matInput formControlName="reason">
         </mat-form-field>
 

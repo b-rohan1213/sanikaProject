@@ -1,33 +1,31 @@
 .event-request {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    width: 80vw;
-    height: 85vh;
-
-    .image {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 95%;
-        height: 95%;
-    }
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     .request-form {
         display: flex;
         justify-content: center;
         align-items: center;
         width: 100%;
-        height: 95%;
+        height: 100%;
 
         form {
             display: grid;
+            grid-template-columns: 1fr 1fr;
             width: 100%;
             justify-content: center;
             align-items: center;
+            margin: 20px;
+
+            mat-form-field{
+                margin: 10px;
+            }
 
             button {
-                margin: 10px;
-                width: 300px;
+                margin: 20px;
+                width: 50%;
+                justify-self: center;
             }
         }
     }

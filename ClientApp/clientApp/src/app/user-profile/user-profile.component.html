@@ -1,10 +1,5 @@
 <mat-card class="user-profile">
-    <div class="user-details">
-        <img src="../../assets/avatar.jpg" class="avatar" alt="no avatar" />
-        <h4>{{userDetails.name}}</h4>
-        <h4>{{userDetails.email}}</h4>
-        <h4>{{userDetails.contactNo}}</h4>
-    </div>
+    <app-user-info class="user-details" [user]="userDetails"></app-user-info>
 
     <div class="event-requests">
         <mat-accordion class="expansions">
@@ -25,12 +20,14 @@
                     <mat-expansion-panel-header>
                         <mat-panel-title>Pending Request</mat-panel-title>
                     </mat-expansion-panel-header>
-                    <div *ngFor="let pendingEvent of pendingRequests" class="pending-list">
+                    <div *ngFor="let pendingEvent of pendingRequests" class="pending-list" style="display: grid; grid-template-columns: 1fr 1fr 1fr;">
                         <p>{{pendingEvent.eventName}}</p>
-                        <button mat-raised-button (click)="viewSuggestions(pendingEvent)"
-                            color="primary">Suggestion</button>
-                        <button mat-stroked-button (click)="rejectEvent(pendingEvent)"
-                            color="warn"><mat-icon>delete</mat-icon></button>
+                        <p>{{pendingEvent.eventDate | date: 'dd-MMMM-yyyy'}}</p>
+                        <div style="display: flex;">
+                            <button mat-raised-button (click)="viewSuggestions(pendingEvent)"
+                                color="primary">Suggestion</button>
+                            <button mat-stroked-button (click)="rejectEvent(pendingEvent)" color="warn">delete</button>
+                        </div>
                     </div>
                 </mat-expansion-panel>
 
@@ -38,8 +35,9 @@
                     <mat-expansion-panel-header>
                         <mat-panel-title>Past Events</mat-panel-title>
                     </mat-expansion-panel-header>
-                    <div *ngFor="let past of pastEvents">
+                    <div *ngFor="let past of pastEvents" style="display: grid; grid-template-columns: 1fr 1fr 1fr 1fr;">
                         <p>{{past.eventName}}</p>
+                        <p>{{past.eventDate | date: 'dd-MMMM-yyyy'}}</p>
                     </div>
                 </mat-expansion-panel>
 
@@ -47,6 +45,10 @@
                     <mat-expansion-panel-header>
                         <mat-panel-title>Rejected Events</mat-panel-title>
                     </mat-expansion-panel-header>
+                    <div *ngFor="let reject of rejectedEvents" style="display: grid; grid-template-columns: 1fr 1fr 1fr 1fr;">
+                        <p>{{reject.eventName}}</p>
+                        <p>{{reject.eventDate | date: 'dd-MMMM-yyyy'}}</p>
+                    </div>
                 </mat-expansion-panel>
             </mat-card>
         </mat-accordion>

@@ -100,8 +100,8 @@ namespace UtsavVista.Web.Controllers
             return this.Ok(currentUser);
         }
 
-        [HttpPost("event/request")]
-        public ActionResult<List<VenueSuggestion>> SaveRequest([FromQuery] string email, [FromBody] RequestEvent request)
+        [HttpPost("event/request/{email}")]
+        public ActionResult<List<VenueSuggestion>> SaveRequest(string email, [FromBody] RequestEvent request)
         {
             if (request == null)
             {
@@ -120,18 +120,45 @@ namespace UtsavVista.Web.Controllers
                 throw new Exception("Invalid credentials");
             }
 
+                        var max = this.dbcontext.EventRequests.Any() ? this.dbcontext.EventRequests.Max(e => (int?)e.RequestID) : null;
+            if (max == null)
+            {
+                max = 1;
+            }
+            else
+            {
+                max = max + 1;
+            }
+
+            EventRequest eventRequest = new EventRequest()
+            {
+                EventDate = request.EventDate,
+                EventName = request.EventName,
+                EventType = request.EventType,
+                UserID = user.UserID,
+                NumberOfPeoples = request.NumberOfPeoples,
+                City = request.City,
+                Budget = request.Budget,
+                Status = "Pending",
+                RejectionReason = "",
+                RevisionReason = "",
+            };
+
+            this.dbcontext.Add(eventRequest);
+            this.dbcontext.SaveChanges();
+
             var availableVenues = dbcontext.venues
                                 .Where(v => v.City == request.City &&
                                             v.Capacity >= request.NumberOfPeoples &&
                                             (v.costs >= request.Budget - 10000 || v.costs <= request.Budget + 10000))
                                 .ToList();
 
+            List<VenueSuggestion> suggestions = new List<VenueSuggestion>();
+
             if (!availableVenues.Any())
             {
-                throw new Exception("No venue found");
+                return suggestions;
             }
-
-            List<VenueSuggestion> suggestions = new List<VenueSuggestion>();
 
             foreach (var venue in availableVenues)
             {
@@ -151,33 +178,6 @@ namespace UtsavVista.Web.Controllers
                     continue;
                 }
             }
-
-            var max = this.dbcontext.EventRequests.Any() ? this.dbcontext.EventRequests.Max(e => (int?)e.RequestID) : null;
-            if (max == null)
-            {
-                max = 1;
-            }
-            else
-            {
-                max = max + 1;
-            }
-
-            EventRequest eventRequest = new EventRequest()
-            {
-                EventDate = request.EventDate,
-                EventName = request.EventName,
-                EventType = request.EventType,
-                UserID = user.UserID,
-                NumberOfPeoples = request.NumberOfPeoples,
-                City = request.City,
-                Budget = 15000,
-                Status = "Pending",
-                RejectionReason = "",
-                RevisionReason = "",
-            };
-
-            this.dbcontext.Add(eventRequest);
-            this.dbcontext.SaveChanges();
 
             return this.Ok(suggestions);
         }
@@ -366,14 +366,32 @@ namespace UtsavVista.Web.Controllers
         [HttpGet("event/{approvedEvent}/finance")]
         public ActionResult<EventFinance> eventFinance(int approvedEvent)
         {
-            if(approvedEvent < 1)
+            if (approvedEvent < 1)
             {
                 throw new Exception("Cannot find event");
             }
 
-            var eventFinance = this.dbcontext.EventFinances.FirstOrDefault(ef =>ef.ApprovedEventID == approvedEvent);
+            var eventFinance = this.dbcontext.EventFinances.FirstOrDefault(ef => ef.ApprovedEventID == approvedEvent);
 
             return this.Ok(eventFinance);
+        }
+
+        [HttpGet("user/{email}")]
+        public ActionResult<UserInfo> getUser(string email)
+        {
+            if (string.IsNullOrWhiteSpace(email))
+            {
+                return BadRequest("Email cannot be empty.");
+            }
+
+            var user = this.dbcontext.Users.FirstOrDefault(u => u.Email == email);
+
+            if (user == null)
+            {
+                return NotFound("User not found.");
+            }
+
+            return Ok(user);
         }
 
         private bool IsVenueAvailableOnDate(int venueId, DateTime eventDate)

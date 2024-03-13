@@ -13,11 +13,13 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { HomeComponent } from './home/home.component';
 import { TeamComponent } from './team/team.component';
 import { MatCardModule } from '@angular/material/card';
-import { MatInputModule } from '@angular/material/input'
-import { MatDialogModule } from '@angular/material/dialog'
-import { MatTable, MatTableModule } from '@angular/material/table'
-import { MatExpansionModule } from '@angular/material/expansion'
-import { MatSnackBarModule } from '@angular/material/snack-bar'
+import { MatInputModule } from '@angular/material/input';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatTable, MatTableModule } from '@angular/material/table';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import {MatNativeDateModule} from '@angular/material/core';
 import { RegisterComponent } from './register/register.component';
 import { FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RejectComponent } from './reject/reject.component';
@@ -27,6 +29,7 @@ import { TransactionComponent } from './transaction/transaction.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
 import { EventRequestComponent } from './event-request/event-request.component';
 import { HttpClientModule } from '@angular/common/http';
+import { UserInfoComponent } from './user-info/user-info.component';
 
 @NgModule({
   declarations: [
@@ -42,6 +45,7 @@ import { HttpClientModule } from '@angular/common/http';
     TransactionComponent,
     UserProfileComponent,
     EventRequestComponent,
+    UserInfoComponent,
   ],
   imports: [
     BrowserModule,
@@ -60,7 +64,9 @@ import { HttpClientModule } from '@angular/common/http';
     MatDialogModule,
     MatTableModule,
     MatExpansionModule,
-    HttpClientModule
+    HttpClientModule,
+    MatDatepickerModule,
+    MatNativeDateModule
   ],
   providers: [],
   bootstrap: [AppComponent],

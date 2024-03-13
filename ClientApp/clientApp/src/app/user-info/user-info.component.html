@@ -1,0 +1,11 @@
+<div class="user-info">
+    <div class="avatar">
+        <img src="../../assets/userAvatar.png" alt="">
+    </div>
+    <div class="info">
+        <h1 style="display: inline-block;" class="userinfo">{{user.name}}</h1><br>
+        <p style="display: inline-block;" class="userinfo" *ngIf="user.userType.toLowerCase() === 'staff'">STAFF</p><br>
+        <p style="display: inline-block;" class="userinfo">{{user.email}}</p><br>
+        <p style="display: inline-block;" class="userinfo">{{user.contactNo}}</p><br>
+    </div>
+</div>

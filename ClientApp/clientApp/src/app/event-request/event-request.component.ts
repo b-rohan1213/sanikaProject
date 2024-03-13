@@ -5,6 +5,7 @@ import { ActivatedRoute } from '@angular/router';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { EventRequest, Suggestion } from '../Models/event';
 import { EventService } from '../services/event.service';
+import { MatSnackBar, MatSnackBarHorizontalPosition, MatSnackBarVerticalPosition } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-event-request',
@@ -16,6 +17,8 @@ export class EventRequestComponent {
   email!: string;
   suggestions: Suggestion[] = [];
   showSuggestions: boolean = false;
+  horizontalPosition: MatSnackBarHorizontalPosition = 'end';
+  verticalPosition: MatSnackBarVerticalPosition = 'top';
 
   requestFormData: EventRequest = {
     eventName: '',
@@ -28,6 +31,7 @@ export class EventRequestComponent {
   };
 
   constructor(
+    private snackBar: MatSnackBar,
     private fb: FormBuilder,
     private eventService: EventService,
     private route: ActivatedRoute,
@@ -57,11 +61,19 @@ export class EventRequestComponent {
 
   sendRequest() {
     this.requestFormData = this.eventRequestForm.value;
+    this.requestFormData.status = "";
 
     this.eventService.sendRequest(this.requestFormData, this.email).subscribe(
       (result: Suggestion[]) => {
         this.suggestions = result;
         this.showSuggestions = true;
+        if (this.suggestions.length < 1) {
+          this.snackBar.open("No Venue available", 'close', {
+            horizontalPosition: this.horizontalPosition,
+            verticalPosition: this.verticalPosition,
+          });
+          this.close();
+        }
       },
       (error) => {
         this.showSuggestions = false;

@@ -3,7 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { MatDialog, MatDialogRef } from '@angular/material/dialog';
 import { RejectComponent } from '../reject/reject.component';
 import { EventRequest } from '../Models/event';
-import { RegisterUser } from '../Models/user';
+import { RegisterUser, UserDetails } from '../Models/user';
 import { EventService } from '../services/event.service';
 import { UserService } from '../services/user.service';
 import { EventRequestComponent } from '../event-request/event-request.component';
@@ -18,57 +18,19 @@ export class UserProfileComponent {
   events: EventRequest[] = [];
   rejectedEvents: EventRequest[] = [];
   upcomingEvents: EventRequest[] = [];
-  pastEvents: EventRequest[] = [
-    {
-      eventName: 'My event',
-      eventType: 'Event',
-      eventDate: new Date(),
-      numberOfPeoples: 100,
-      city: 'Kolhapur',
-      budget: 50000,
-      status: 'pending'
-    },
-    {
-      eventName: 'My event',
-      eventType: 'Event',
-      eventDate: new Date(),
-      numberOfPeoples: 100,
-      city: 'Kolhapur',
-      budget: 50000,
-      status: 'pending'
-    }
-  ];
-  pendingRequests: EventRequest[] = [
-    {
-      eventName: 'My event',
-      eventType: 'Event',
-      eventDate: new Date(),
-      numberOfPeoples: 100,
-      city: 'Kolhapur',
-      budget: 50000,
-      status: 'pending'
-    },
-    {
-      eventName: 'My event',
-      eventType: 'Event',
-      eventDate: new Date(),
-      numberOfPeoples: 100,
-      city: 'Kolhapur',
-      budget: 50000,
-      status: 'pending'
-    }
-  ];
+  pastEvents: EventRequest[] = [];
+  pendingRequests: EventRequest[] = [];
 
   email: string = "";
   today = new Date();
   isPastEventsExpanded: boolean = false;
   columndefs: any;
 
-  userDetails: RegisterUser = {
+  userDetails: UserDetails = {
     name: '',
     email: '',
     contactNo: '',
-    password: '',
+    userType:''
   };
 
   constructor(private router: ActivatedRoute, private eventSevice: EventService, private dialog: MatDialog, private userServie: UserService) {
@@ -86,6 +48,8 @@ export class UserProfileComponent {
     this.dialog.open(EventRequestComponent, {
       data: { email: this.email, onlySuggestions: false, eventRequest: null },
       disableClose: true,
+      width:'fit-content',
+      height:'fit-content'
     });
   }
 
@@ -97,7 +61,11 @@ export class UserProfileComponent {
   }
 
   getUserDetails(email: string) {
-    this.userServie.getUserDetails(email).subscribe()
+    this.userServie.getUserDetails(email).subscribe(
+      (response)=>{
+        this.userDetails = response;
+      }
+    )
   }
 
   getEventByUser(email: string) {
@@ -109,13 +77,13 @@ export class UserProfileComponent {
           if (ev.status === 'rejected') {
             this.rejectedEvents.push(ev);
           }
-          else if (ev.status === 'approved' && ev.eventDate >= this.today) {
+          else if (ev.status.toLowerCase() === 'approved' && ev.eventDate >= this.today) {
             this.upcomingEvents.push(ev);
           }
-          else if (ev.status === 'approved' && ev.eventDate < this.today) {
+          else if (ev.status.toLowerCase() === 'approved' && ev.eventDate < this.today) {
             this.pastEvents.push(ev);
           }
-          else if (ev.status === 'pending') {
+          else if (ev.status.toLowerCase() === 'pending') {
             this.pendingRequests.push(ev);
           }
         });
@@ -129,9 +97,7 @@ export class UserProfileComponent {
   rejectEvent(request: EventRequest) {
     this.dialog.open(RejectComponent, {
       data: request,
-      disableClose: true,
-      width: '40%',
-      height: 'auto',
+      disableClose: true, 
     })
   }
 }
