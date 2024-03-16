@@ -4,6 +4,9 @@
   padding-bottom: 36%; /* 9 divided by 16 (aspect ratio) multiplied by 100 to get percentage */
   position: relative;
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   .corousel-image{
     width: 100%;

@@ -3,8 +3,13 @@
 //   position: fixed;
 //   width: 100%;
 // }
+
+*{
+  overflow-x: hidden
+}
 router-outlet {
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow-x: hidden;
 }

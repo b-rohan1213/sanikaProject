@@ -27,3 +27,4 @@ D:\Rohan\sanikaProject\UtsavVista\UtsavVista.Data\obj\Debug\net8.0\refint\UtsavV
 D:\Rohan\sanikaProject\UtsavVista\UtsavVista.Data\obj\Debug\net8.0\UtsavVista.Data.pdb
 D:\Rohan\sanikaProject\UtsavVista\UtsavVista.Data\obj\Debug\net8.0\UtsavVista.Data.genruntimeconfig.cache
 D:\Rohan\sanikaProject\UtsavVista\UtsavVista.Data\obj\Debug\net8.0\ref\UtsavVista.Data.dll
+D:\UtsavVista\UtsavVista\UtsavVista.Data\obj\Debug\net8.0\UtsavVista.Data.sourcelink.json

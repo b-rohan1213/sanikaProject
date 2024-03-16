@@ -1,105 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Rohan\\sanikaProject\\UtsavVista\\UtsavVista.Web\\UtsavVista.Web.csproj": {}
+    "D:\\UtsavVista\\UtsavVista\\UtsavVista.Web\\UtsavVista.Web.csproj": {}
   },
   "projects": {
-    "D:\\Rohan\\sanikaProject\\UtsavVista\\UtsavVista.Business\\UtsavVista.Business.csproj": {
+    "D:\\UtsavVista\\UtsavVista\\UtsavVista.Data\\UtsavVista.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Rohan\\sanikaProject\\UtsavVista\\UtsavVista.Business\\UtsavVista.Business.csproj",
-        "projectName": "UtsavVista.Business",
-        "projectPath": "D:\\Rohan\\sanikaProject\\UtsavVista\\UtsavVista.Business\\UtsavVista.Business.csproj",
-        "packagesPath": "C:\\Users\\aniket\\.nuget\\packages\\",
-        "outputPath": "D:\\Rohan\\sanikaProject\\UtsavVista\\UtsavVista.Business\\obj\\",
-        "projectStyle": "PackageReference",
-        "configFilePaths": [
-          "C:\\Users\\aniket\\AppData\\Roaming\\NuGet\\NuGet.Config"
-        ],
-        "originalTargetFrameworks": [
-          "net8.0"
-        ],
-        "sources": {
-          "https://api.nuget.org/v3/index.json": {}
-        },
-        "frameworks": {
-          "net8.0": {
-            "targetAlias": "net8.0",
-            "projectReferences": {}
-          }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
-        }
-      },
-      "frameworks": {
-        "net8.0": {
-          "targetAlias": "net8.0",
-          "dependencies": {
-            "Microsoft.EntityFrameworkCore": {
-              "target": "Package",
-              "version": "[8.0.1, )"
-            },
-            "Microsoft.EntityFrameworkCore.Design": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[8.0.1, )"
-            },
-            "Microsoft.EntityFrameworkCore.SqlServer": {
-              "target": "Package",
-              "version": "[8.0.1, )"
-            },
-            "Microsoft.EntityFrameworkCore.Tools": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[8.0.1, )"
-            }
-          },
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48",
-            "net481"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
-          "frameworkReferences": {
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
-        }
-      }
-    },
-    "D:\\Rohan\\sanikaProject\\UtsavVista\\UtsavVista.Data\\UtsavVista.Data.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "D:\\Rohan\\sanikaProject\\UtsavVista\\UtsavVista.Data\\UtsavVista.Data.csproj",
+        "projectUniqueName": "D:\\UtsavVista\\UtsavVista\\UtsavVista.Data\\UtsavVista.Data.csproj",
         "projectName": "UtsavVista.Data",
-        "projectPath": "D:\\Rohan\\sanikaProject\\UtsavVista\\UtsavVista.Data\\UtsavVista.Data.csproj",
-        "packagesPath": "C:\\Users\\aniket\\.nuget\\packages\\",
-        "outputPath": "D:\\Rohan\\sanikaProject\\UtsavVista\\UtsavVista.Data\\obj\\",
+        "projectPath": "D:\\UtsavVista\\UtsavVista\\UtsavVista.Data\\UtsavVista.Data.csproj",
+        "packagesPath": "C:\\Users\\RAJASHREE\\.nuget\\packages\\",
+        "outputPath": "D:\\UtsavVista\\UtsavVista\\UtsavVista.Data\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\aniket\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\RAJASHREE\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -112,11 +34,6 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -160,37 +77,36 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Rohan\\sanikaProject\\UtsavVista\\UtsavVista.Web\\UtsavVista.Web.csproj": {
+    "D:\\UtsavVista\\UtsavVista\\UtsavVista.Web\\UtsavVista.Web.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Rohan\\sanikaProject\\UtsavVista\\UtsavVista.Web\\UtsavVista.Web.csproj",
+        "projectUniqueName": "D:\\UtsavVista\\UtsavVista\\UtsavVista.Web\\UtsavVista.Web.csproj",
         "projectName": "UtsavVista.Web",
-        "projectPath": "D:\\Rohan\\sanikaProject\\UtsavVista\\UtsavVista.Web\\UtsavVista.Web.csproj",
-        "packagesPath": "C:\\Users\\aniket\\.nuget\\packages\\",
-        "outputPath": "D:\\Rohan\\sanikaProject\\UtsavVista\\UtsavVista.Web\\obj\\",
+        "projectPath": "D:\\UtsavVista\\UtsavVista\\UtsavVista.Web\\UtsavVista.Web.csproj",
+        "packagesPath": "C:\\Users\\RAJASHREE\\.nuget\\packages\\",
+        "outputPath": "D:\\UtsavVista\\UtsavVista\\UtsavVista.Web\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\aniket\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\RAJASHREE\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\Rohan\\sanikaProject\\UtsavVista\\UtsavVista.Business\\UtsavVista.Business.csproj": {
-                "projectPath": "D:\\Rohan\\sanikaProject\\UtsavVista\\UtsavVista.Business\\UtsavVista.Business.csproj"
-              },
-              "D:\\Rohan\\sanikaProject\\UtsavVista\\UtsavVista.Data\\UtsavVista.Data.csproj": {
-                "projectPath": "D:\\Rohan\\sanikaProject\\UtsavVista\\UtsavVista.Data\\UtsavVista.Data.csproj"
+              "D:\\UtsavVista\\UtsavVista\\UtsavVista.Data\\UtsavVista.Data.csproj": {
+                "projectPath": "D:\\UtsavVista\\UtsavVista\\UtsavVista.Data\\UtsavVista.Data.csproj"
               }
             }
           }
@@ -199,11 +115,6 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -254,7 +165,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

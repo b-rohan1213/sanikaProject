@@ -1,7 +1,12 @@
+*{
+    color: white;
+}
+
 .event-request {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-image: url('../../assets/corosel-1.jpg') ;
 
     .request-form {
         display: flex;
@@ -20,6 +25,9 @@
 
             mat-form-field{
                 margin: 10px;
+                input{
+                    color: white;
+                }
             }
 
             button {

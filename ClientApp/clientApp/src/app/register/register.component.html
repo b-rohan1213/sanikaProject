@@ -1,5 +1,6 @@
 <mat-card class="register">
   <div class="image">
+    <img src="../../assets/register-background.jpg" alt="" height="100%" width="100%">
   </div>
 
   <div class="form" *ngIf="!isLogin">
@@ -24,7 +25,7 @@
 
       <mat-form-field appearance="outline">
         <mat-label>Password</mat-label>
-        <input matInput formControlName="password" />
+        <input matInput formControlName="password" type="password" />
         <mat-error></mat-error>
       </mat-form-field>
 
@@ -35,7 +36,7 @@
       </mat-form-field>
 
       <button mat-raised-button (click)="register()" color="primary">Register</button>
-      <button mat-stroked-button (click)="toggleRegister()" color="warn">Already a User? Login</button>
+      <button mat-stroked-button (click)="toggleRegister()" color="basic">Already a User? Login</button>
     </form>
   </div>
 
@@ -49,12 +50,12 @@
 
       <mat-form-field appearance="outline">
         <mat-label>Password</mat-label>
-        <input matInput formControlName="password" />
+        <input matInput formControlName="password" type="password"/>
         <mat-error></mat-error>
       </mat-form-field>
 
       <button mat-raised-button (click)="login()" color="primary" class="main-button">Login</button>
-      <button mat-stroked-button (click)="toggleRegister()" color="warn" class="toggle-button">New User? Regiter</button>
+      <button mat-stroked-button (click)="toggleRegister()" color="basic" class="toggle-button">New User? Regiter</button>
     </form>
   </div>
 

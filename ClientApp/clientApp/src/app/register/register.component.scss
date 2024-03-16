@@ -1,9 +1,14 @@
+* {
+    color: white;
+}
+
 .register {
     display: grid;
     grid-template-columns: 1fr 1fr;
     width: 95vw;
     height: 80vh;
     margin: 30px;
+    background-image: url('../../assets/register-background.jpg');
 
     .image {
         display: flex;
@@ -25,6 +30,10 @@
             width: 100%;
             justify-content: center;
             align-items: center;
+
+            input {
+                color: white;
+            }
 
             button {
                 margin: 10px;
